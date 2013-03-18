@@ -18,7 +18,7 @@ $tables = $con->list_tables();
 foreach ($tables as $key => $table) {
 	$fds = $con->get_fields($table);
 	foreach ($fds as $k => $fd) {
-		//Ìæ»»¿âÖÐËùÓÐÏà¹ØÄÚÈÝ
+		//æ›¿æ¢åº“ä¸­æ‰€æœ‰ç›¸å…³å†…å®¹
 		$sql = "update $table set $k=replace($k,'admin163.net','madman.in')";
 		 
 		$con->query($sql);
